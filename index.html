@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Launchpad — Sergio Musetti</title>
+  <meta name="description" content="Curated resources for people who travel, move abroad, and navigate life across borders. Apostille guides, travel gear, document services, and more.">
+  <meta name="keywords" content="apostille, certified translation, travel gear, expat documents, foreign tax ID, rushed passport, travel resources, Sergio Musetti">
+  <meta property="og:title" content="The Launchpad — Sergio Musetti">
+  <meta property="og:description" content="Everything you need to go. Apostille guides, document services, travel gear, pet essentials, and more.">
+  <meta property="og:type" content="website">
+  <meta name="author" content="Sergio Musetti">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --teal:       #1a3a44;
+      --teal-mid:   #224d5a;
+      --teal-light: #2d6374;
+      --gold:       #c4965a;
+      --gold-light: #d4aa78;
+      --cream:      #f7f3ee;
+      --cream-dark: #ede8e0;
+      --text:       #1a1a1a;
+      --text-mid:   #444;
+      --white:      #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--teal);
+      color: var(--white);
+      padding: 80px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(196,150,90,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(45,99,116,0.4) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .header-tag {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.2s;
+    }
+
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(52px, 8vw, 96px);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -1px;
+      color: var(--white);
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+
+    header h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .header-sub {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      margin: 20px auto 0;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.6s;
+    }
+
+    .header-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 28px auto 0;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.8s;
+    }
+
+    /* ── NAV PILLS ── */
+    nav {
+      background: var(--teal-mid);
+      padding: 0 24px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(196,150,90,0.2);
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 16px 18px;
+      transition: color 0.2s, border-color 0.2s;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    /* ── INTRO ── */
+    .intro {
+      max-width: 680px;
+      margin: 72px auto 0;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .intro p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(19px, 2.5vw, 23px);
+      font-weight: 400;
+      color: var(--teal);
+      line-height: 1.65;
+    }
+
+    .intro p em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .disclosure {
+      max-width: 680px;
+      margin: 24px auto 0;
+      padding: 0 24px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-mid);
+      opacity: 0.7;
+    }
+
+    /* ── MAIN GRID ── */
+    main {
+      max-width: 1100px;
+      margin: 72px auto 80px;
+      padding: 0 24px;
+    }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 72px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .section-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 600;
+      color: var(--teal);
+      line-height: 1;
+    }
+
+    .section-num {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    /* ── SUBSECTION ── */
+    .subsection {
+      margin-bottom: 36px;
+    }
+
+    .subsection h3 {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    /* ── LINK GRID ── */
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 10px;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      border-left: 3px solid transparent;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 400;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+      border-radius: 2px;
+    }
+
+    .link-card:hover {
+      border-left-color: var(--gold);
+      box-shadow: 0 4px 20px rgba(26,58,68,0.08);
+      transform: translateX(2px);
+      color: var(--teal);
+    }
+
+    .link-card .arrow {
+      margin-left: auto;
+      color: var(--cream-dark);
+      font-size: 16px;
+      transition: color 0.2s, transform 0.2s;
+      flex-shrink: 0;
+    }
+
+    .link-card:hover .arrow {
+      color: var(--gold);
+      transform: translateX(3px);
+    }
+
+    /* ── FEATURED CARD (wide, for main services) ── */
+    .link-grid.featured {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+
+    .link-card.featured-card {
+      padding: 18px 22px;
+      background: var(--teal);
+      border: 1px solid var(--teal-light);
+      border-left: 3px solid var(--gold);
+      color: var(--white);
+    }
+
+    .link-card.featured-card:hover {
+      background: var(--teal-mid);
+      box-shadow: 0 4px 24px rgba(26,58,68,0.25);
+      color: var(--white);
+    }
+
+    .link-card.featured-card .arrow {
+      color: rgba(196,150,90,0.4);
+    }
+
+    .link-card.featured-card:hover .arrow {
+      color: var(--gold);
+    }
+
+    /* ── SOCIAL GRID ── */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .social-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 24px 16px;
+      background: var(--white);
+      border: 1px solid var(--cream-dark);
+      text-decoration: none;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+      border-radius: 2px;
+    }
+
+    .social-card:hover {
+      background: var(--teal);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(26,58,68,0.15);
+      transform: translateY(-2px);
+    }
+
+    .social-icon {
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    /* ── HASHTAGS ── */
+    .hashtags {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      padding: 0 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hashtag {
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: var(--teal-light);
+      background: var(--cream-dark);
+      padding: 5px 12px;
+      border-radius: 100px;
+      font-weight: 400;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--teal);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    footer .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav a { padding: 14px 12px; font-size: 10px; letter-spacing: 1.5px; }
+      .link-grid, .link-grid.featured { grid-template-columns: 1fr; }
+      .social-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-tag">Sergio Musetti</div>
+  <h1>The <em>Launchpad</em></h1>
+  <p class="header-sub">Everything you need to go — documents, gear, guides, and services for people who move through the world.</p>
+  <div class="header-divider"></div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="#documents">Documents</a>
+  <a href="#guides">Guides</a>
+  <a href="#travel">Travel</a>
+  <a href="#gear">Gear</a>
+  <a href="#pet">Pet</a>
+  <a href="#tools">Tools</a>
+  <a href="#read">Read</a>
+  <a href="#watch">Watch</a>
+</nav>
+
+<!-- INTRO -->
+<div class="intro">
+  <p>Whether you're booking a flight, apostilling a document, packing a bag, or moving to another country — <em>these are the resources I actually use and recommend.</em></p>
+</div>
+<div class="disclosure">
+  Affiliate disclosure: some links below are affiliate links. If you purchase through them, I may earn a small commission at no extra cost to you.
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- 1. DOCUMENT SERVICES -->
+  <div class="section" id="documents">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Apostille & Document Services</h2>
+    </div>
+    <div class="link-grid featured">
+      <a class="link-card featured-card" href="https://idiomaticaffiliates.com/order-a-translation/ref/apostillehelp/" target="_blank" rel="noopener">
+        Certified Translation — USCIS Accepted <span class="arrow">→</span>
+      </a>
+      <a class="link-card featured-card" href="https://idiomaticaffiliates.com/order-a-translation/ref/apostillehelp/#apostille" target="_blank" rel="noopener">
+        Apostille Service <span class="arrow">→</span>
+      </a>
+      <a class="link-card featured-card" href="https://idiomaticaffiliates.com/order-a-translation/ref/apostillehelp/#Interpretation" target="_blank" rel="noopener">
+        Certified Interpretation Service <span class="arrow">→</span>
+      </a>
+      <a class="link-card featured-card" href="https://idiomaticaffiliates.com/order-a-translation/ref/apostillehelp/#TaxID" target="_blank" rel="noopener">
+        Spanish Tax ID — NIE Service <span class="arrow">→</span>
+      </a>
+      <a class="link-card featured-card" href="https://idiomaticaffiliates.com/order-a-translation/ref/apostillehelp/#TaxID" target="_blank" rel="noopener">
+        FBI Background Check + Apostille <span class="arrow">→</span>
+      </a>
+      <a class="link-card featured-card" href="https://rushedpassport.com/ref/30/" target="_blank" rel="noopener">
+        Rushed Passport Service <span class="arrow">→</span>
+      </a>
+      <a class="link-card featured-card" href="https://visawebservices.com/?ref=12" target="_blank" rel="noopener">
+        Visa Web Services <span class="arrow">→</span>
+      </a>
+      <a class="link-card featured-card" href="https://thespanishgroup.org/?affiliate_code=sergiomusetti" target="_blank" rel="noopener">
+        The Spanish Group — Translation Services <span class="arrow">→</span>
+      </a>
+      <a class="link-card featured-card" href="https://tinyurl.com/27ec2t5c" target="_blank" rel="noopener">
+        Apostille Request Form <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. GUIDES -->
+  <div class="section" id="guides">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Apostille Guides</h2>
+    </div>
+
+    <div class="subsection">
+      <h3>English — Gumroad</h3>
+      <div class="link-grid">
+        <a class="link-card" href="https://apostille8.gumroad.com/l/vzaens" target="_blank" rel="noopener">How to Apostille a Notarized Document in California <span class="arrow">→</span></a>
+        <a class="link-card" href="https://apostille8.gumroad.com/l/jrxlex" target="_blank" rel="noopener">DIY Apostille Guide — Divorce Decree (USA) <span class="arrow">→</span></a>
+        <a class="link-card" href="https://apostille8.gumroad.com/l/ecgws" target="_blank" rel="noopener">How to Apostille a Death Certificate — Out-of-State USA <span class="arrow">→</span></a>
+        <a class="link-card" href="https://apostille8.gumroad.com/l/qreih" target="_blank" rel="noopener">How to Apostille a Marriage Certificate — USA <span class="arrow">→</span></a>
+        <a class="link-card" href="https://apostille8.gumroad.com/l/birth-certificate-apostille-usa" target="_blank" rel="noopener">How to Apostille a Birth Certificate — USA <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>Español — Gumroad</h3>
+      <div class="link-grid">
+        <a class="link-card" href="https://apostille8.gumroad.com/l/hzwvj" target="_blank" rel="noopener">Cómo Apostillar un Certificado de Divorcio — EE. UU. <span class="arrow">→</span></a>
+        <a class="link-card" href="https://apostille8.gumroad.com/l/dlxpag" target="_blank" rel="noopener">Cómo Apostillar un Acta de Defunción — EE. UU. <span class="arrow">→</span></a>
+        <a class="link-card" href="https://apostille8.gumroad.com/l/ntkwqw" target="_blank" rel="noopener">Cómo Apostillar un Acta de Matrimonio — USA <span class="arrow">→</span></a>
+        <a class="link-card" href="https://apostille8.gumroad.com/l/jkmhn" target="_blank" rel="noopener">Cómo Apostillar un Acta de Nacimiento — USA <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>Etsy</h3>
+      <div class="link-grid">
+        <a class="link-card" href="https://apostillehelp.etsy.com/listing/4340377131/how-to-apostille-a-birth-certificate-out" target="_blank" rel="noopener">How to Apostille a Birth Certificate — Etsy <span class="arrow">→</span></a>
+        <a class="link-card" href="https://www.etsy.com/listing/4346043044/guia-para-apostillar-acta-de-nacimiento" target="_blank" rel="noopener">Guía para Apostillar Acta de Nacimiento — Etsy <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>Amazon</h3>
+      <div class="link-grid">
+        <a class="link-card" href="https://www.amazon.com/dp/B0FQN29V4W?tag=bilingualap07-20" target="_blank" rel="noopener">DIY Apostille Guide CA 2025 — English <span class="arrow">→</span></a>
+        <a class="link-card" href="https://www.amazon.com/dp/B0FR22MLMN?tag=bilingualap07-20" target="_blank" rel="noopener">Cómo Apostillar en California — Español <span class="arrow">→</span></a>
+        <a class="link-card" href="https://www.amazon.com/dp/B0G32HQ7J2?tag=bilingualap07-20" target="_blank" rel="noopener">Directorio de Registros Vitales California — Español <span class="arrow">→</span></a>
+        <a class="link-card" href="https://www.amazon.com/dp/B0CGTR2R5K?tag=bilingualap07-20" target="_blank" rel="noopener">DIY Apostille Guide 2023 — English <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3>California Vital Records Directory</h3>
+      <div class="link-grid">
+        <a class="link-card" href="https://apostille8.gumroad.com/l/azgxok" target="_blank" rel="noopener">Complete Edition 2026 — English <span class="arrow">→</span></a>
+        <a class="link-card" href="https://apostille8.gumroad.com/l/nwezi" target="_blank" rel="noopener">Basic Edition — English <span class="arrow">→</span></a>
+        <a class="link-card" href="https://apostille8.gumroad.com/l/liaez" target="_blank" rel="noopener">Edición Completa — Español <span class="arrow">→</span></a>
+        <a class="link-card" href="https://apostille8.gumroad.com/l/ghfcepk" target="_blank" rel="noopener">Edición Básica — Español <span class="arrow">→</span></a>
+        <a class="link-card" href="https://www.etsy.com/listing/4407654337/directorio-de-registros-vitales-de" target="_blank" rel="noopener">Directorio de Registros Vitales — Etsy <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. TRAVEL -->
+  <div class="section" id="travel">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Travel — Book a Trip</h2>
+    </div>
+    <div class="link-grid">
+      <a class="link-card" href="https://bit.ly/4uuDKR0" target="_blank" rel="noopener">Viator — Tours & Experiences <span class="arrow">→</span></a>
+      <a class="link-card" href="https://www.hotels.com" target="_blank" rel="noopener">Hotels.com <span class="arrow">→</span></a>
+      <a class="link-card" href="https://www.vrbo.com" target="_blank" rel="noopener">Vrbo — Vacation Rentals <span class="arrow">→</span></a>
+      <a class="link-card" href="https://bit.ly/TravelerGloblinker" target="_blank" rel="noopener">Globlinker — International SIM & eSIM <span class="arrow">→</span></a>
+      <a class="link-card" href="https://rebrand.ly/amexgreen" target="_blank" rel="noopener">Amex Green Card — Travel Rewards Referral <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- 4. GEAR -->
+  <div class="section" id="gear">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Travel Gear — Amazon</h2>
+    </div>
+    <div class="link-grid">
+      <a class="link-card" href="https://amzn.to/48szMiM" target="_blank" rel="noopener">Osprey Farpoint 40 Backpack <span class="arrow">→</span></a>
+      <a class="link-card" href="https://amzn.to/4mXamzT" target="_blank" rel="noopener">Eagle Creek Packing Cubes <span class="arrow">→</span></a>
+      <a class="link-card" href="https://amzn.to/4tyM5T8" target="_blank" rel="noopener">RFID Blocking Travel Wallet <span class="arrow">→</span></a>
+      <a class="link-card" href="https://amzn.to/4egzGOX" target="_blank" rel="noopener">Etekcity Luggage Scale <span class="arrow">→</span></a>
+      <a class="link-card" href="https://amzn.to/4sXSNAX" target="_blank" rel="noopener">Anker 733 Power Bank <span class="arrow">→</span></a>
+      <a class="link-card" href="https://amzn.to/4u99dYe" target="_blank" rel="noopener">EPICKA Travel Adapter <span class="arrow">→</span></a>
+      <a class="link-card" href="https://amzn.to/4tCD8rP" target="_blank" rel="noopener">Sony WH-1000XM5 Headphones <span class="arrow">→</span></a>
+      <a class="link-card" href="https://amzn.to/4cFkQk0" target="_blank" rel="noopener">Trtl Travel Pillow <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- 5. PET -->
+  <div class="section" id="pet">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Pet Essentials</h2>
+    </div>
+    <div class="link-grid">
+      <a class="link-card" href="https://apostille8.gumroad.com/l/xouikf" target="_blank" rel="noopener">Pet Emergency Binder for Dogs — Gumroad <span class="arrow">→</span></a>
+      <a class="link-card" href="https://www.amazon.com/dp/B0GK8RL3RP?tag=bilingualap07-20" target="_blank" rel="noopener">Pet Emergency Binder for Dogs — Amazon <span class="arrow">→</span></a>
+      <a class="link-card" href="https://www.etsy.com/listing/4448483675/pet-emergency-binder-for-dogs-printable" target="_blank" rel="noopener">Pet Emergency Binder — Printable — Etsy <span class="arrow">→</span></a>
+      <a class="link-card" href="https://www.etsy.com/listing/4452279639/pet-emergency-binder-for-dogs-printable" target="_blank" rel="noopener">Pet Emergency Binder — Gift Edition — Etsy <span class="arrow">→</span></a>
+      <a class="link-card" href="https://sites.google.com/view/prepared-pet-printables" target="_blank" rel="noopener">Prepared Pet Printables — Full Resource Site <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- 6. TOOLS -->
+  <div class="section" id="tools">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>Tools & Resources</h2>
+    </div>
+    <div class="link-grid">
+      <a class="link-card" href="https://qrcode-ai.com/?via=sergio-musetti" target="_blank" rel="noopener">QR Code Generator — AI <span class="arrow">→</span></a>
+      <a class="link-card" href="https://www.strikingly.com/a/t0UHyv" target="_blank" rel="noopener">Strikingly — Build a Free Website <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- 7. READ -->
+  <div class="section" id="read">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2>Read</h2>
+    </div>
+    <div class="link-grid">
+      <a class="link-card" href="https://sergiomusetti.substack.com" target="_blank" rel="noopener">Substack — Travel Writing & Expat Life <span class="arrow">→</span></a>
+      <a class="link-card" href="https://connectedtraveler.blogspot.com" target="_blank" rel="noopener">Connected Traveler Blog <span class="arrow">→</span></a>
+      <a class="link-card" href="https://connectedtraveler.blogspot.com/p/shop-my-favorites-apostille-travel-pet.html" target="_blank" rel="noopener">Shop My Favorites <span class="arrow">→</span></a>
+      <a class="link-card" href="https://linktr.ee/apostillehelp" target="_blank" rel="noopener">All Links — Linktree <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- 8. WATCH & LISTEN -->
+  <div class="section" id="watch">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2>Watch & Listen</h2>
+    </div>
+    <div class="social-grid">
+      <a class="social-card" href="https://www.youtube.com/@SergioMusetti" target="_blank" rel="noopener">
+        <span class="social-icon">▶</span>YouTube
+      </a>
+      <a class="social-card" href="https://www.instagram.com/apostille.help" target="_blank" rel="noopener">
+        <span class="social-icon">◈</span>Instagram<br><small>@apostille.help</small>
+      </a>
+      <a class="social-card" href="https://www.instagram.com/connected.traveler" target="_blank" rel="noopener">
+        <span class="social-icon">◈</span>Instagram<br><small>@connected.traveler</small>
+      </a>
+      <a class="social-card" href="https://www.tiktok.com/@apostilleguide" target="_blank" rel="noopener">
+        <span class="social-icon">♪</span>TikTok
+      </a>
+      <a class="social-card" href="https://open.spotify.com/episode/53qF9o3joh9d7Y1gsjn1Wd" target="_blank" rel="noopener">
+        <span class="social-icon">◉</span>Spotify Podcast
+      </a>
+      <a class="social-card" href="https://music.amazon.com/podcasts/d1e61f81-9dab-405b-ad33-0ffaeeed6e09/apostillehelp-legal-tips-guides" target="_blank" rel="noopener">
+        <span class="social-icon">◉</span>Amazon Music Podcast
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<!-- HASHTAGS -->
+<div class="hashtags">
+  <span class="hashtag">#apostille</span>
+  <span class="hashtag">#certifiedtranslation</span>
+  <span class="hashtag">#expat</span>
+  <span class="hashtag">#livingabroad</span>
+  <span class="hashtag">#traveldocuments</span>
+  <span class="hashtag">#travelgear</span>
+  <span class="hashtag">#slowtravel</span>
+  <span class="hashtag">#digitalnomad</span>
+  <span class="hashtag">#NIE</span>
+  <span class="hashtag">#rushedpassport</span>
+  <span class="hashtag">#pettravel</span>
+  <span class="hashtag">#californiadocuments</span>
+  <span class="hashtag">#connectedtraveler</span>
+  <span class="hashtag">#apostillehelp</span>
+  <span class="hashtag">#sergiomusetti</span>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Sergio Musetti</div>
+  <p>Travel writing, expat life, and the documents nobody tells you about.</p>
+  <p style="margin-top:12px;">
+    <a href="https://sergiomusetti.substack.com">Substack</a> &nbsp;·&nbsp;
+    <a href="https://linktr.ee/apostillehelp">Linktree</a> &nbsp;·&nbsp;
+    <a href="https://www.youtube.com/@SergioMusetti">YouTube</a>
+  </p>
+  <p style="margin-top:20px; font-size:11px; opacity:0.5;">
+    Some links on this page are affiliate links. I may earn a commission at no extra cost to you.
+  </p>
+</footer>
+
+<script>
+  // Scroll-triggered section reveals
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
